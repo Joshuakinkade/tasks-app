@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let task of tasks; let i = index">
+    <app-task-list-item [task]="task" (taskUpdated)="saveTask(i, $event)"
+                        (taskDeleted)="deleteTask(i)"></app-task-list-item>
+  </li>
+</ul>

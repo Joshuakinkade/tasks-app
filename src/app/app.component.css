@@ -1,0 +1,19 @@
+.container {
+  width: 40ch;
+  position: relative;
+  margin: 0 auto;
+}
+
+.app-header {
+  text-align: center;
+}
+
+.app-header input {
+  font-size: 2em;
+  margin: .75em 0;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}

@@ -1,0 +1,13 @@
+<div class="task-list-item">
+  <input type="checkbox" [(ngModel)]="newStatus" (change)="updateTask()" />
+  <span class="text" *ngIf="!editingTask">{{task?.text}}</span>
+  <span class="inline-edit" *ngIf="editingTask">
+    <input type="text" [(ngModel)]="newText" (blur)="updateTask()"
+           (keypress)="handleKeyPress($event)" #text/>
+  </span>
+  <span class="controls">
+    <button class="edit" *ngIf="!editingTask" (click)="editTask()">edit</button>
+    <button class="cancel" *ngIf="editingTask" (click)="cancelEdit()">cancel</button>
+    <button class="delete" (click)="deleteTask()">&times;</button>
+  </span>
+</div>

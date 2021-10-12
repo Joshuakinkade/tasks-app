@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="form-group">
+    <input type="text"
+           placeholder="What do you need to do?"
+           id="task-text"
+           [(ngModel)]="text"
+           name="text"
+           required/>
+    <button type="submit" [disabled]="f.invalid">Add</button>
+  </div>
+</form>
